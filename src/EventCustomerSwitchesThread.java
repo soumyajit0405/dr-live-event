@@ -102,6 +102,7 @@ class EventCustomerSwitchesThread implements Runnable {
 		input.put("intent", "action.entities.EXEC");
 		int responseFromDevice = httpconnectorhelper
 				.sendPostWithToken("https://api.kiot.io/integrations/ctp/go",bearerToken, input);
+		System.out.println("Response from KIOT "+ responseFromDevice);
 		if(responseFromDevice == 0) {
 			dbhelper.updateEventCustomer(eventId,customerId,12);
 		} else {

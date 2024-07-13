@@ -132,6 +132,7 @@ public class DBHelper {
 		
 		public void updateEventCustomerToLive( int eventId, int userId) throws SQLException, ClassNotFoundException
 		{
+			System.out.println("Updating to live "+ eventId+ " "+userId);
 		try {	
 		 //JDBCConnection connref =new JDBCConnection();
 		 if (ScheduleDAO.con == null ) {
